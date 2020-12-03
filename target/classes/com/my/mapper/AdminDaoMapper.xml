@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.my.dao.AdminDao">
+
+    <resultMap id="queryMap" type="Admin">
+        <id column="adminId" property="adminId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="salt" property="salt"/>
+        <collection property="roleList" ofType="Role">
+            <id column="roleId" property="roleId"/>
+            <result column="roleName" property="roleName"/>
+            <collection property="authorityList" ofType="Authority">
+                <id column="authorityId" property="authorityId" />
+                <result column="authorityName" property="authorityName" />
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="queryByUsernames" resultMap="queryMap">
+        select
+            a.admin_id adminId,a.username,a.password,a.salt,
+            r.role_id roleId,r.role_name roleName,
+            au.authority_id authorityId,au.authority_name authorityName
+            from s_admin a
+            left join s_admin_role ar on a.admin_id=ar.admin_id
+            left join s_role r on ar.role_id=r.role_id
+            left join s_role_authority ra on r.role_id=ra.role_id
+            left join s_authority au on ra.authority_id=au.authority_id
+        where username=#{username}
+    </select>
+
+    <select id="queryByUsername" resultType="Admin" parameterType="String">
+        select admin_id adminId,username,password,salt from s_admin where username=#{username}
+    </select>
+
+</mapper>
