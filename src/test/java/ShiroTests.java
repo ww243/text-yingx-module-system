@@ -1,6 +1,6 @@
 import com.my.ShiroTestBoot;
-import com.my.entity.Shiro;
-import com.my.service.ShiroService;
+import com.my.helloword.Shiro;
+import com.my.routing.ShiroService;
 import com.my.util.Md5Utils;
 import org.apache.shiro.crypto.hash.*;
 import org.junit.Test;

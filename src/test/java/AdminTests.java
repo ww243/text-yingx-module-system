@@ -1,14 +1,11 @@
 import com.my.ShiroTestBoot;
-import com.my.entity.Admin;
-import com.my.service.AdminService;
+import com.my.helloword.Admin;
+import com.my.routing.AdminService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import sun.security.krb5.internal.crypto.crc32;
-
-import javax.annotation.Resource;
 
 /**
  * @author:ljn

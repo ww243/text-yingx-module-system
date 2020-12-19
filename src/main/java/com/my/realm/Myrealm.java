@@ -1,9 +1,9 @@
 package com.my.realm;
 
-import com.my.entity.Admin;
-import com.my.entity.Authority;
-import com.my.entity.Role;
-import com.my.service.AdminService;
+import com.my.helloword.Admin;
+import com.my.helloword.Authority;
+import com.my.helloword.Role;
+import com.my.routing.AdminService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;

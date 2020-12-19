@@ -23,7 +23,7 @@
                         password="123123">
         </jdbcConnection>
         <!--生成Model类存放位置 entity-->
-        <javaModelGenerator targetPackage="com.my.entity" targetProject="./src/main/java">
+        <javaModelGenerator targetPackage="com.my.helloword" targetProject="./src/main/java">
             <!--是否合并-->
             <property name="enableSubPackages" value="true"/>
             <!--去除空格-->
@@ -35,7 +35,7 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!--生成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.my.dao" targetProject="./src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.my.topic" targetProject="./src/main/java">
             <!--是否合并-->
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>

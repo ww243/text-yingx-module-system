@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
-<mapper namespace="com.my.dao.AdminDao">
+<mapper namespace="com.my.topic.AdminDao">
 
     <resultMap id="queryMap" type="Admin">
         <id column="adminId" property="adminId"/>
